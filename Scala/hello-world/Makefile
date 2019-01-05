@@ -1,0 +1,2 @@
+run:
+	@scala HelloWorld.scala
