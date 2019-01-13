@@ -1,0 +1,2 @@
+run:
+	@./lirst-fast.py
