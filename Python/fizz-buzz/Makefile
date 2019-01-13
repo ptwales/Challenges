@@ -1,0 +1,2 @@
+run:
+	@./fizz-buzz.py
