@@ -1,3 +1,6 @@
 **/challenge
+# Haskell
+*.hi
+*.o
 # Scala
 **/.metals/
