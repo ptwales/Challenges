@@ -29,14 +29,11 @@ object Main extends App {
     }
 
   @tailrec
-  def run(prev: State, stream: Stream[State => State]): State =
-    stream match {
-      case h #:: hs =>
-        val next = h(prev)
-        if (!next.quit) run(next, hs)
-        else next
-      case Stream.Empty => prev
-    }
+  def run(prev: State, handle: State => State): State = {
+    val next = handle(prev)
+    if (!next.quit) run(next, handle)
+    else next
+  }
 
-  run(State(false, 0), Stream.continually(handle(_)))
+  run(State(false, 0), handle)
 }
