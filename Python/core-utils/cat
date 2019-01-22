@@ -1,0 +1,16 @@
+#!/usr/bin/env python3
+
+import sys
+
+def cat(file):
+    try:
+        with open(file, 'r') as f:
+            print(f.read())
+    except OSError as oserr:
+        print(f"{sys.argv[0]}: {file}: {oserr}")
+
+
+if __name__ == '__main__':
+    files = sys.argv[1:]
+    for file in files:
+        cat(file)

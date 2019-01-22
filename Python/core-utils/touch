@@ -1,0 +1,13 @@
+#!/usr/bin/env python3
+
+import sys
+
+def touch(file):
+    with open(file, 'w') as f:
+        f.write('')
+
+
+if __name__ == '__main__':
+    files = sys.argv[1:]
+    for file in files:
+        touch(file)

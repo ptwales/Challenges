@@ -1,0 +1,25 @@
+#!/usr/bin/env python3
+
+import os
+import sys
+
+def ls(target):
+    try:
+        items = os.listdir(target)
+        print('  '.join(items))
+    except OSError as err:
+        print(f"OS error: {err}")
+        
+
+if __name__ == '__main__':
+    targets = sys.argv[1:]
+    if len(targets) == 0:
+        ls('.')
+        pass
+    elif len(targets) == 1:
+        ls(targets[0])
+    else:
+        for target in targets:
+            print(f"{target}:")
+            ls(target)
+            print("")
