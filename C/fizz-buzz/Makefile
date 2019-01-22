@@ -1,7 +1,5 @@
-challenge:
+build: main.c
 	gcc -o challenge main.c
-
-build: challenge
 
 clean:
 	rm challenge
