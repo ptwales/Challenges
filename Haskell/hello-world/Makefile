@@ -1,4 +1,4 @@
-challenge:
+challenge: HelloWorld.hs
 	ghc HelloWorld && mv HelloWorld challenge
 
 build: challenge

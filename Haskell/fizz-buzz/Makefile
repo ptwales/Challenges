@@ -1,4 +1,4 @@
-challenge:
+challenge: challenge.hs
 	ghc challenge
 
 build: challenge
