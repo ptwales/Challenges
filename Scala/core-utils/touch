@@ -1,13 +1,16 @@
 #!/usr/bin/env scala
 
-import java.nio.file._
-import java.nio.file.StandardOpenOption._
+import java.nio.file.Files
+import java.nio.file.Paths
+import java.nio.file.attribute.FileTime
+import java.util.Date
 
 object Touch extends App {
 
+  val now: FileTime = FileTime.fromMillis(new Date().getTime)
   for (arg <- args) {
     val path = Paths.get(arg)
-    Files.write(path, Array[Byte](), APPEND, CREATE)
+    Files.setLastModifiedTime(path, now)
   }
 
 }
