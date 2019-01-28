@@ -3,13 +3,25 @@
 import os
 import sys
 
+
 def ls(target):
     try:
         items = os.listdir(target)
         print('  '.join(items))
     except OSError as err:
         print(f"OS error: {err}")
-        
+
+
+def print_file(file):
+    permissions = "drwxr-xr-x"
+    items = 0
+    user = "ptwales"
+    group = "ptwales
+    bytes = "4096"
+    date = "Jan 4 18:45"
+    name = "Code"
+    print(f"{permissions} {items} {user} {group} {bytes} {date} {name}")
+
 
 if __name__ == '__main__':
     targets = sys.argv[1:]
@@ -23,3 +35,4 @@ if __name__ == '__main__':
             print(f"{target}:")
             ls(target)
             print("")
+

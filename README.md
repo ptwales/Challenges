@@ -22,14 +22,13 @@ The Basics
     - Prompt again if more or less than two words were given.
       * Respond with how many words were given and what the words were.
       * Track how many wrong answers were given in a row.
-  1. Produce executables that perform the following core utils:     
+  1. Produce executables that perform the following core utils without any
+     option flags. They must be able to accept multiple arguments
     2. `echo`
-    2. `ls`
     2. `cat`
     2. `touch`
-     _(option flags are optional. Wrapper scripts in `sh` are acceptable if
-     needed)_
-  1. **Something that accepts and parses mutliple argumnts**
+  1. Produce an `ll` executable that behaves like `ls -l`.
+  1. **Something that accepts and parses multiple command flags**
 
 Build Systems
 -------------

@@ -7,7 +7,4 @@ cat: cat.hs
 touch: touch.hs
 	ghc -dynamic touch.hs -o bin/touch
 
-ls: ls.hs
-	ghc -dynamic ls.hs -o bin/ls
-
-build: ls touch cat echo
+build: touch cat echo
