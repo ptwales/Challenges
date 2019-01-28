@@ -1,0 +1,16 @@
+#!/usr/bin/env scala
+
+import java.nio.file._
+import java.util.stream.{Stream => JavaStream}
+import scala.collection.JavaConverters._
+
+object Cat {
+
+  def main(args: Array[String]): Unit = args.map(Paths.get(_)).foreach(cat)
+
+  def cat(path: Path): Unit = Files.lines(path).asScala.foreach(println)
+
+  implicit class JavaToScalaStream[A](self: JavaStream[A]) {
+    def asScala: Stream[A] = self.iterator.asScala.toStream
+  }
+}

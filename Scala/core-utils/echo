@@ -1,0 +1,5 @@
+#!/usr/bin/env scala
+
+object Echo extends App {
+  println(args.mkString(" "))
+}

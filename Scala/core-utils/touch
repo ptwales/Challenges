@@ -1,0 +1,13 @@
+#!/usr/bin/env scala
+
+import java.nio.file._
+import java.nio.file.StandardOpenOption._
+
+object Touch extends App {
+
+  for (arg <- args) {
+    val path = Paths.get(arg)
+    Files.write(path, Array[Byte](), APPEND, CREATE)
+  }
+
+}
