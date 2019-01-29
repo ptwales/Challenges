@@ -1,4 +1,4 @@
-challenge:
+challenge: main.c
 	gcc -o challenge main.c
 
 build: challenge
